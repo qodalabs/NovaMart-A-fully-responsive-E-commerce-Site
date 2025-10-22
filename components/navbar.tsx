@@ -12,11 +12,11 @@ export function Navbar() {
   const bg = useMotionTemplate`rgba(17, 24, 39, ${bgOpacity})`
 
   const links = [
-    { href: '/', label: 'Home' },
-    { href: '/products', label: 'Products' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
-  ]
+    { href: '/' as const, label: 'Home' },
+    { href: '/products' as const, label: 'Products' },
+    { href: '/about' as const, label: 'About' },
+    { href: '/contact' as const, label: 'Contact' },
+  ] as const
 
   return (
     <motion.header
